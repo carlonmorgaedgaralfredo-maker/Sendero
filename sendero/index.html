@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sendero Cobach Plantel 01</title>
+    <link rel="stylesheet" href="./sendero.css">
+</head>
+<style>
+     button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #2d7a2b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #54b18d;
+        }
+</style>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo-titulo">
+                <img src="./Logotipo_COBACH.png" alt="Logo">
+                <h1>Sendero Escolar Plantel 01</h1>
+            </div>
+
+            <ul class="menu">
+                <li>
+                    <a href="https://www.cobachbcs.edu.mx/" target="_blank">
+                        ESCUELA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://ibizabotanicobiotecnologico.com/que-es-un-jardin-botanico/" target="_blank">
+                        IMPORTANCIA
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://buenosaires.gob.ar/gcaba_historico/noticias/asi-funcionan-los-senderos-escolares-de-la-ciudad" target="_blank">
+                        ¿QUE ES UN SENDERO?
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+   
+    <main>
+
+        <section class="galeria">
+         
+            
+            <div class="card">
+                <img src="./8d905d65-46a2-4f76-96ae-9c691eae6c45.jpg" alt="Imagen 2">
+                <p id="parrafo-a-leer">La Gobernadora (Larrea tridentata) es un arbusto sumamente resistente y emblemático de las zonas desérticas de México. Es famosa porque sus hojas están cubiertas de una resina que despide un olor muy fuerte y característico, conocido popularmente como el "olor a lluvia" del desierto.</p>
+            
+    <button id="btn-escuchar">Escuchar párrafo</button>
+
+    <script>
+        const btnEscuchar = document.getElementById('btn-escuchar');
+        
+        // Capturamos el párrafo por su ID
+        const parrafo = document.getElementById('parrafo-a-leer');
+    
+        if ('speechSynthesis' in window) {
+            
+            btnEscuchar.addEventListener('click', () => {
+                // Cancelar cualquier reproducción previa activa
+                window.speechSynthesis.cancel();
+    
+                // Extraemos el texto limpio del párrafo usando textContent
+                const textoLimpio = parrafo.textContent.trim();
+    
+                if (textoLimpio) {
+                    const utterance = new SpeechSynthesisUtterance(textoLimpio);
+                    utterance.lang = 'es-ES'; // Idioma configurado en español
+                    
+                    // Reproducir
+                    window.speechSynthesis.speak(utterance);
+                }
+            });
+    
+        } else {
+            alert("Tu navegador no soporta la reproducción de voz.");
+        }
+    </script>
+            </div>
+
+            
+            <div class="card">
+                <img src="./64dfc147-aa88-4e02-a486-56f45a81b579.jpg" alt="Imagen 3">
+                <p id="parrafo-a-leer2">La Pitaya Dulce (nombre científico: Stenocereus thurberi) es una cactácea columnar nativa de las zonas áridas del noroeste de México, especialmente emblemática de la península de Baja California y Sonora. Se caracteriza por crecer en forma de candelabro, desarrollando múltiples brazos verticales que nacen desde una base común y corta a nivel del suelo.</p>
+                <button id="btn-escuchar2">Escuchar párrafo</button>
+
+                <script>
+                    const btnEscuchar2 = document.getElementById('btn-escuchar2');
+                    
+                    // Capturamos el párrafo por su ID
+                    const parrafo2 = document.getElementById('parrafo-a-leer2');
+                
+                    if ('speechSynthesis' in window) {
+                        
+                        btnEscuchar2.addEventListener('click', () => {
+                            // Cancelar cualquier reproducción previa activa
+                            window.speechSynthesis.cancel();
+                
+                            // Extraemos el texto limpio del párrafo usando textContent
+                            const textoLimpio2 = parrafo2.textContent.trim();
+                
+                            if (textoLimpio2) {
+                                const utterance2 = new SpeechSynthesisUtterance(textoLimpio2);
+                                utterance2.lang = 'es-ES'; // Idioma configurado en español
+                                
+                                // Reproducir
+                                window.speechSynthesis.speak(utterance2);
+                            }
+                        });
+                
+                    } else {
+                        alert("Tu navegador no soporta la reproducción de voz.");
+                    }
+                </script>
+          
+          
+            </div>
+
+           
+            <div class="card">
+                <img src="./217a3433-11b9-423f-9074-757a61aa53f0.jpg" alt="Imagen 4">
+                <p id="parrafo-a-leer3">El Cardón (nombre científico: Pachycereus pringlei) es la especie de cactus más alta del mundo, capaz de alcanzar hasta 20 metros de altura y vivir por cientos de años. Es una planta endémica y sumamente emblemática del noroeste de México, con una presencia masiva y espectacular en la península de Baja California y Sonora.</p>
+                <button id="btn-escuchar3">Escuchar párrafo</button>
+
+                <script>
+                    const btnEscuchar3 = document.getElementById('btn-escuchar3');
+                    
+                    // Capturamos el párrafo por su ID
+                    const parrafo3 = document.getElementById('parrafo-a-leer3');
+                
+                    if ('speechSynthesis' in window) {
+                        
+                        btnEscuchar3.addEventListener('click', () => {
+                            // Cancelar cualquier reproducción previa activa
+                            window.speechSynthesis.cancel();
+                
+                            // Extraemos el texto limpio del párrafo usando textContent
+                            const textoLimpio3 = parrafo3.textContent.trim();
+                
+                            if (textoLimpio3) {
+                                const utterance3 = new SpeechSynthesisUtterance(textoLimpio3);
+                                utterance3.lang = 'es-ES'; // Idioma configurado en español
+                                
+                                // Reproducir
+                                window.speechSynthesis.speak(utterance3);
+                            }
+                        });
+                
+                    } else {
+                        alert("Tu navegador no soporta la reproducción de voz.");
+                    }
+                </script>
+            </div>
+
+           
+            <div class="card">
+                <img src="./852c79ca-5d94-40ac-962b-292f2fce3f3e.jpg" alt="Imagen 6">
+                <p id="parrafo-a-leer4">La Pitaya Agria (Stenocereus gummosus) es una cactácea arbustiva y muy ramificada endémica de la península de Baja California y las islas del Golfo de California. A diferencia de las cactáceas columnares altas, sus brazos delgados y espinosos crecen de forma arqueada, inclinándose con frecuencia hacia el suelo o postrándose en él.</p>
+                <button id="btn-escuchar4">Escuchar párrafo</button>
+
+                <script>
+                    const btnEscuchar4 = document.getElementById('btn-escuchar4');
+                    
+                    // Capturamos el párrafo por su ID
+                    const parrafo4 = document.getElementById('parrafo-a-leer4');
+                
+                    if ('speechSynthesis' in window) {
+                        
+                        btnEscuchar4.addEventListener('click', () => {
+                            // Cancelar cualquier reproducción previa activa
+                            window.speechSynthesis.cancel();
+                
+                            // Extraemos el texto limpio del párrafo usando textContent
+                            const textoLimpio4 = parrafo4.textContent.trim();
+                
+                            if (textoLimpio4) {
+                                const utterance4 = new SpeechSynthesisUtterance(textoLimpio4);
+                                utterance4.lang = 'es-ES'; // Idioma configurado en español
+                                
+                                // Reproducir
+                                window.speechSynthesis.speak(utterance4);
+                            }
+                        });
+                
+                    } else {
+                        alert("Tu navegador no soporta la reproducción de voz.");
+                    }
+                </script>
+            </div>
+
+          
+            <div class="card">
+                <img src="./1898bb62-5201-4169-bfc8-3ea3bc43dfc9.jpg" alt="Imagen 7">
+                <p id="parrafo-a-leer5">La Jojoba (Simmondsia chinensis) es un arbusto perenne, leñoso y muy ramificado, nativo de los desiertos de Sonora y Baja California. Es sumamente resistente a las sequías extremas y al calor debido a sus hojas ovaladas, gruesas y de un tono verde grisáceo, las cuales están cubiertas por una capa cerosa que evita la pérdida de agua.</p>
+                <button id="btn-escuchar5">Escuchar párrafo</button>
+
+                <script>
+                    const btnEscuchar5 = document.getElementById('btn-escuchar5');
+                    
+                    // Capturamos el párrafo por su ID
+                    const parrafo5 = document.getElementById('parrafo-a-leer5');
+                
+                    if ('speechSynthesis' in window) {
+                        
+                        btnEscuchar5.addEventListener('click', () => {
+                            // Cancelar cualquier reproducción previa activa
+                            window.speechSynthesis.cancel();
+                
+                            // Extraemos el texto limpio del párrafo usando textContent
+                            const textoLimpio5 = parrafo5.textContent.trim();
+                
+                            if (textoLimpio5) {
+                                const utterance5 = new SpeechSynthesisUtterance(textoLimpio5);
+                                utterance5.lang = 'es-ES'; // Idioma configurado en español
+                                
+                                // Reproducir
+                                window.speechSynthesis.speak(utterance5);
+                            }
+                        });
+                
+                    } else {
+                        alert("Tu navegador no soporta la reproducción de voz.");
+                    }
+                </script>
+            </div>
+
+            <div class="card">
+                <img src="./aabf4e26-a12c-472e-bf76-3e1ccd9dc1ab.jpg" alt="Imagen 8">
+                <p id="parrafo-a-leer6">El Nopal (Opuntia) es una de las cactáceas más representativas, abundantes y con mayor importancia cultural en México. Se caracteriza por sus tallos planos y ovalados en forma de paletas, llamados cladodios o pencas, los cuales están cubiertos de espinas y cumplen la función de almacenar grandes cantidades de agua para resistir las sequías del desierto.</p>
+                <button id="btn-escuchar6">Escuchar párrafo</button>
+
+                <script>
+                    const btnEscuchar6 = document.getElementById('btn-escuchar6');
+                    
+                    // Capturamos el párrafo por su ID
+                    const parrafo6 = document.getElementById('parrafo-a-leer6');
+                
+                    if ('speechSynthesis' in window) {
+                        
+                        btnEscuchar6.addEventListener('click', () => {
+                            // Cancelar cualquier reproducción previa activa
+                            window.speechSynthesis.cancel();
+                
+                            // Extraemos el texto limpio del párrafo usando textContent
+                            const textoLimpio6 = parrafo6.textContent.trim();
+                
+                            if (textoLimpio6) {
+                                const utterance6 = new SpeechSynthesisUtterance(textoLimpio6);
+                                utterance6.lang = 'es-ES'; // Idioma configurado en español
+                                
+                                // Reproducir
+                                window.speechSynthesis.speak(utterance6);
+                            }
+                        });
+                
+                    } else {
+                        alert("Tu navegador no soporta la reproducción de voz.");
+                    }
+                </script>
+            </div>
+
+           
+            <div class="card">
+                <img src="./WhatsApp Image 2025-05-19 at 5.53.58 PM.jpeg" alt="Imagen 12">
+                <p id="parrafo-a-leer7">Copal Blanco (Bursera microphylla)
+Es un árbol pequeño o arbusto aromático nativo de las regiones áridas de Sonora y la península de Baja California, también conocido como torote blanco. Se caracteriza por su tronco grueso y ramas retorcidas de corteza clara que se exfolia (se desprende en finas capas) y por producir una resina con un olor muy agradable y penetrante que ha sido usada desde la antigüedad como incienso y en la medicina tradicional. Es sumamente resistente a la escasez de agua, perdiendo sus hojas compuestas durante las temporadas secas para evitar la deshidratación.</p>
+<button id="btn-escuchar7">Escuchar párrafo</button>
+
+                <script>
+                    const btnEscuchar7 = document.getElementById('btn-escuchar7');
+                    
+                    // Capturamos el párrafo por su ID
+                    const parrafo7 = document.getElementById('parrafo-a-leer7');
+                
+                    if ('speechSynthesis' in window) {
+                        
+                        btnEscuchar7.addEventListener('click', () => {
+                            // Cancelar cualquier reproducción previa activa
+                            window.speechSynthesis.cancel();
+                
+                            // Extraemos el texto limpio del párrafo usando textContent
+                            const textoLimpio7 = parrafo7.textContent.trim();
+                
+                            if (textoLimpio7) {
+                                const utterance7 = new SpeechSynthesisUtterance(textoLimpio7);
+                                utterance7.lang = 'es-ES'; // Idioma configurado en español
+                                
+                                // Reproducir
+                                window.speechSynthesis.speak(utterance7);
+                            }
+                        });
+                
+                    } else {
+                        alert("Tu navegador no soporta la reproducción de voz.");
+                    }
+                </script>            
+</div>
+
+            <div class="card video-card">
+
+    <video controls>
+        <source src="./video jardin botanico.mp4" type="video/mp4">
+        Tu navegador no soporta videos.
+    </video>
+
+    <p>
+        Video informativo del sendero escolar y las especies presentes en el Plantel 01.
+    </p>
+
+</div>
+
+        </section>
+
+    </main>
+
+    
+    <footer>
+
+        <section class="mapa-info">
+
+            <h2>Ubicación del Sendero</h2>
+
+           
+            <iframe 
+    src="https://www.google.com/maps?q=Colegio+de+Bachilleres+Plantel+01+La+Paz+BCS&output=embed"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+            </iframe>
+
+            
+            <div class="info">
+                <h3>COLEGIO DE BACHILLERES DEL ESTADO DE BAJA CALIFORNIA SUR PLANTEL 01</h3>
+                <p>Fotografias tomadas del snedero escolar del plantel 01, donde estamos comprometidos a cuidar y perserbar a las especies y seres vivos que habitan en esta zona.
+                </p>
+            </div>
+            <div>
+                <p>La paz Baja California Sur 2026</p>
+            </div>
+
+        </section>
+
+    </footer>
+
+</body>
+</html>
